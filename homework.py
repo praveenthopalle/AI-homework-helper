@@ -29,7 +29,9 @@ st.title("AI Homework Helper")
 
 # User Inputs for Homework Help
 subject = st.selectbox('Select Subject', ('Mathematics', 'Science', 'History', 'Literature'))
+
 question = st.text_area('Enter your homework question', 'Type here...')
+
 additional_info = st.text_area('Any additional information', 'Type here...')
 
 # Initialize Tools and LLM
