@@ -9,8 +9,11 @@ import base64
 
 load_dotenv()
 
-# Load environment variables for API Keys
-os.environ["OPENAI_API_KEY"] = "your_openai_api_key"
+os.environ["OPENAI_API_KEY"] = "your_openai_api_key" # Load environment variables for API Keys
+
+def get_download_link(bio, filename):
+    b64 = base64.b64encode(bio.read()).decode()
+    return f'<a href="data:application/vnd.openxmlformats-officedocument.wordprocessingml.document;base64,{b64}" download="{filename}">Download Homework Help Document</a>'
 
 def generate_docx(content):
     doc = Document()
@@ -20,10 +23,6 @@ def generate_docx(content):
     doc.save(bio)
     bio.seek(0)
     return bio
-
-def get_download_link(bio, filename):
-    b64 = base64.b64encode(bio.read()).decode()
-    return f'<a href="data:application/vnd.openxmlformats-officedocument.wordprocessingml.document;base64,{b64}" download="{filename}">Download Homework Help Document</a>'
 
 st.set_page_config(layout="wide")
 st.title("AI Homework Helper")
