@@ -35,6 +35,7 @@ question = st.text_area('Enter your homework question', 'Type here...')
 additional_info = st.text_area('Any additional information', 'Type here...')
 
 # Initialize Tools and LLM
+# Here we can use any opensource LLM like claude as well
 
 llm = ChatOpenAI(
     model="gpt-4o-mini",
