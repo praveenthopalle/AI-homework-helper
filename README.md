@@ -1,6 +1,6 @@
-# AI-Agents-Streamlit-App
+# AI-homework-helper
 Developed By Praveen Kumar Thopalle,
-AI Agents Streamlit App using Crew AI to do homework for kids.
+AI Agents using Crew AI to do homework for kids.
 
 Here is out the UI Looks.
 ![AI Homework Helper UI Home page](img/AIhomeworkhelperhomepage.png)
